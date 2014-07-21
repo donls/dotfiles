@@ -7,8 +7,7 @@
 [ -f /etc/bash.bashrc ] && . /etc/bash.bashrc
 
 [ -f /etc/ksh.kshrc ] && . /etc/ksh.kshrc
-
-
+[ -f /etc/kshrc ] && . /etc/kshrc
 
 export VISUAL=vim
 echo "\nFor bash shell, try 'do_bash'"

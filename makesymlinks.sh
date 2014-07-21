@@ -28,7 +28,7 @@ for file in $files; do
     if [ -f ~/.$file ] ; then
         echo "Moving previous version of $file from ~ to $olddir"
         mv ~/.$file $olddir
-        echo "Creating symlink to $file in home directory."
-        ln -s $dir/$file ~/.$file
     fi
+    echo "Creating symlink to $file in home directory."
+    ln -s $dir/$file ~/.$file
 done

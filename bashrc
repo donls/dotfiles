@@ -21,7 +21,7 @@ set history=10000
 export VISUAL=vim
 export PAGER=less
 export LESS='-CeM'
-vim:ts=4:sw=4
+# vim:ts=4:sw=4
 
 # Other prompting for root
 _t=""

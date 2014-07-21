@@ -1,0 +1,42 @@
+# .bash_alias - Custom alias settings for bash
+
+## Color ls aliases
+## Note: BSD version uses colorls; Linux uses 'ls --color=auto'
+## Generic version (no color)
+alias ls='ls -F'
+alias ll='ls -alF'
+
+## BSD version:
+# alias ll='colorls -alFG'
+# alias ls='colorls -FG'
+
+## Linux version (colors hard to read)
+# alias ls='ls -F --color=auto'
+# alias ll='ls -alF --color=auto'
+
+alias   h='history'
+
+alias   back='set back="$old"; set old="$cwd"; cd "$back"; unset back; dirs'
+
+alias   z='suspend'
+alias   c='clear'
+alias   e='exit'
+
+alias   sh="egrep '^Host' ~/.ssh/config"
+
+alias   sx='screen -x'
+alias   tx='tmux attach'
+
+alias vi='/usr/local/bin/vim'
+
+# Previous version; works better as function (IMHO) - dee 2013 03 18
+# alias   path='echo $PATH | tr ":" "\n"'
+
+function path {
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH
+    IFS=$old
+}
+
+# End of .bash.alias

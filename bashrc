@@ -106,6 +106,8 @@ if test "$UID" -eq 0 -a -t ; then
 	alias   pkg_find="echo ls | ftp -a $PKG_PATH | sed 's/.*\ //g' | grep -i "
 fi
 
+# Source aliases in from home/.bash_alias
+[ -r ~/.bash_alias ] && . ~/.bash_alias
 
 # Set vi mode for history editing
 set -o vi
